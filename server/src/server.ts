@@ -1,15 +1,11 @@
 import express from 'express';
+import routes from './routes/routes'
 
 const app = express();
 
-app.get('/users', (req, res) => {
-    console.log('Listagem de usuarios');
-    res.json([
-        'DIego',
-        'Lucas',
-        'Tiago'
-    ]);
-});
+app.use(express.json());
+
+app.use(routes);
 
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
