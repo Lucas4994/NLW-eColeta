@@ -36,7 +36,7 @@ class PointsController {
             .distinct()
             .select('point.*');
 
-        res.json(points);
+        return res.json(points);
     } 
 
     async create(req: Request, res: Response) {
