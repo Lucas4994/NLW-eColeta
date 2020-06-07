@@ -16,6 +16,7 @@ interface Params {
 interface Data {
   point: {
     iamge: string,
+    iamgeUrl: string,
     email: string,
     whatsapp: string,
     city: string,
@@ -41,7 +42,6 @@ const Details = () => {
   useEffect(() => {
     api.get(`points/${routeParams.point_id}`).then(response => {
       setData(response.data);
-      console.log(response.data)
     });
   }, []);
 
@@ -80,7 +80,7 @@ const Details = () => {
         <TouchableOpacity onPress={handleNavigationBack}>
           <Icon name="arrow-left" size={24} color="#34cb79" />
         </TouchableOpacity>
-        <Image style={styles.pointImage} source={{ uri: data.point.iamge }} />
+        <Image style={styles.pointImage} source={{ uri: data.point.iamgeUrl }} />
 
         <Text style={styles.pointName}>{data.point.name}</Text>
         <Text style={styles.pointItems}>{data.items.map(item => item.title).join(', ')}</Text>
