@@ -1,3 +1,4 @@
 server/node_modules
 web/node_modules
 server/src/database/database.sqlite
+/app1/googleKey
