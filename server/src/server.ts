@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import routes from './routes/routes'
 import path from 'path';
+import {errors} from 'celebrate'
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(routes);
 
 
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
+
+app.use(errors);
 
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
