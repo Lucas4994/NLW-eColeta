@@ -3,7 +3,7 @@ Projeto desenvolvido na Next Level Week da Rocktseat, com o objetivo aprimorar o
 
 * Utilizando o React foi desenvolvido uma spa para fazer o cadastro dos pontos de coleta.
 * A api foi desenvolvida utilizando node js e sqlite, com o auxilio do queryBuilder Knex para realizar as consultas.
-* O App utiliza da localização do usúario para listar os pontos de coleta disponibilizando informações para que o interessado possa entrar em contato.
+* O App desinvolvido com o react-native utiliza da localização do usúario para listar os pontos de coleta disponibilizando informações para que o interessado possa entrar em contato.
 
 
 
